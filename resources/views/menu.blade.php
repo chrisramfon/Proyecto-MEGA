@@ -18,14 +18,12 @@
                          <li><a href="#top" class="smoothScroll">Inicio</a></li>
                          <li><a href="#about" class="smoothScroll">Nosotros</a></li>
                          <li><a href="#team" class="smoothScroll">Productos</a></li>
-                         <li><a href="#courses" class="smoothScroll">Courses</a></li>
+                         <li><a href="#courses" class="smoothScroll">Citas</a></li>
                          <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
                          <li><a href="#contact" class="smoothScroll">Contacto</a></li>
                     </ul>
 
-                    <ul class="nav navbar-nav navbar-right">
-                         <li><a href="#"><i class="fa fa-phone"></i> +65 2244 1100</a></li>
-                    </ul>
+                   
                </div>
 
           </div>

@@ -258,7 +258,7 @@ https://templatemo.com/tm-516-known
 
   .custom-navbar {
     background: #000000;
-    border-top: 5px solid #EA4D1A;/*----------Linea de color de arriba del menú----------*/
+    border-top: 5px solid #EA4D1A;/*----------------Linea de color de arriba del menú-------------*/
     border-bottom: 0;
     -webkit-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 1px 30px rgba(0, 0, 0, 0.1);
@@ -382,7 +382,7 @@ https://templatemo.com/tm-516-known
   .caption h3 a:hover { color: #FF3; }
 
   .home-slider .item-first {
-    background-image: url(../images/slider-image1.jpg);
+    background-image: url(../images/slider-image1.png);
 	background-position: center;
   }
 
@@ -391,7 +391,7 @@ https://templatemo.com/tm-516-known
   }
 
   .home-slider .item-third {
-    background-image: url(../images/slider-image3.jpg);
+    background-image: url(../images/slider-image3.png);
   }
 
 
