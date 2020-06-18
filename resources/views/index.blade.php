@@ -129,12 +129,12 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-6 col-sm-12">
                          <div class="about-info">
-                              <h2>Start your journey to a better life with online practical courses</h2>
+                              <h2>Dedicados al servicio eléctrico automotriz en general</h2>
 
                               <figure>
                                    <span><i class="fa fa-users"></i></span>
                                    <figcaption>
-                                        <h3>Professional Trainers</h3>
+                                        <h3>Misión</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
                                    </figcaption>
                               </figure>
@@ -142,7 +142,7 @@ https://templatemo.com/tm-516-known
                               <figure>
                                    <span><i class="fa fa-certificate"></i></span>
                                    <figcaption>
-                                        <h3>International Certifications</h3>
+                                        <h3>Visión</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
                                    </figcaption>
                               </figure>
@@ -150,7 +150,7 @@ https://templatemo.com/tm-516-known
                               <figure>
                                    <span><i class="fa fa-bar-chart-o"></i></span>
                                    <figcaption>
-                                        <h3>Free for 3 months</h3>
+                                        <h3>Valores</h3>
                                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint ipsa voluptatibus.</p>
                                    </figcaption>
                               </figure>
@@ -184,7 +184,7 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Teachers <small>Meet Professional Trainers</small></h2>
+                              <h2>Productos <small>Solo te ofrecemos las mejores marcas</small></h2>
                          </div>
                     </div>
 
@@ -565,76 +565,8 @@ https://templatemo.com/tm-516-known
 
 
      <!-- FOOTER -->
-     <footer id="footer">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="footer-info">
-                              <div class="section-title">
-                                   <h2>Headquarter</h2>
-                              </div>
-                              <address>
-                                   <p>1800 dapibus a tortor pretium,<br> Integer nisl dui, ABC 12000</p>
-                              </address>
-
-                              <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
-                              </ul>
-
-                              <div class="copyright-text"> 
-                                   <p>Copyright &copy; 2019 Company Name</p>
-                                   
-                                   <p>Design: TemplateMo</p>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                         <div class="footer-info">
-                              <div class="section-title">
-                                   <h2>Contact Info</h2>
-                              </div>
-                              <address>
-                                   <p>+65 2244 1100, +66 1800 1100</p>
-                                   <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
-                              </address>
-
-                              <div class="footer_menu">
-                                   <h2>Quick Links</h2>
-                                   <ul>
-                                        <li><a href="#">Career</a></li>
-                                        <li><a href="#">Investor</a></li>
-                                        <li><a href="#">Terms & Conditions</a></li>
-                                        <li><a href="#">Refund Policy</a></li>
-                                   </ul>
-                              </div>
-                         </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-12">
-                         <div class="footer-info newsletter-form">
-                              <div class="section-title">
-                                   <h2>Newsletter Signup</h2>
-                              </div>
-                              <div>
-                                   <div class="form-group">
-                                        <form action="#" method="get">
-                                             <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required="">
-                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Send me">
-                                        </form>
-                                        <span><sup>*</sup> Please note - we do not spam your email.</span>
-                                   </div>
-                              </div>
-                         </div>
-                    </div>
-                    
-               </div>
-          </div>
-     </footer>
-
+     
+     @extends('piepagina')
 
      <!-- SCRIPTS -->
      <script src="plantilla/js/jquery.js"></script>

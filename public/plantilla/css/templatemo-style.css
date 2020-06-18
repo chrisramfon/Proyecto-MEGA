@@ -444,9 +444,9 @@ https://templatemo.com/tm-516-known
   }
 
   #about figure span i {
-    background: #29ca8e;
+    background:#EA4D1A;/*--------Circulos de la parte de "nosotros"-----------*/
     border-radius: 50px;
-    color: #ffffff;
+    color: #EA4D1A; /*Cuadrito blanco de los circulos*/
     font-size: 25px;
     width: 50px;
     height: 50px;
