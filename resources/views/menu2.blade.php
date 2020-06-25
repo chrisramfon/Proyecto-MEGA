@@ -15,12 +15,7 @@
                <!-- MENU LINKS -->
                <div class="collapse navbar-collapse">
                     <ul class="nav navbar-nav navbar-nav-first">
-                         <li><a href="#top" class="smoothScroll">Inicio</a></li>
-                         <li><a href="#about" class="smoothScroll">Nosotros</a></li>
-                         <li><a href="#team" class="smoothScroll">Productos</a></li>
-                         <li><a href="#courses" class="smoothScroll">Citas</a></li>
-                         <li><a href="#testimonial" class="smoothScroll">Reviews</a></li>
-                         <li><a href="#contact" class="smoothScroll">Contacto</a></li>
+                         <li><a href="http://127.0.0.1:8000/#top" class="smoothScroll">Inicio</a></li>
                     </ul>
 
                    

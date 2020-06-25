@@ -16,3 +16,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+Route::get('/registrar', ['as' => 'registrar',function () {
+    return view('registro');
+}]);

@@ -52,9 +52,9 @@ https://templatemo.com/tm-516-known
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
-                                             <h1>Distance Learning Education Center</h1>
+                                            <!-- <h1>Distance Learning Education Center</h1>
                                              <h3>Our online courses are designed to fit in your industry supporting all-round with latest technologies.</h3>
-                                             <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>
+                                             <a href="#feature" class="section-btn btn btn-default smoothScroll">Discover more</a>-->
                                         </div>
                                    </div>
                               </div>
@@ -64,9 +64,9 @@ https://templatemo.com/tm-516-known
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
-                                             <h1>Start your journey with our practical courses</h1>
+                                             <!--<h1>Start your journey with our practical courses</h1>
                                              <h3>Our online courses are built in partnership with technology leaders and are designed to meet industry demands.</h3>
-                                             <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>
+                                             <a href="#courses" class="section-btn btn btn-default smoothScroll">Take a course</a>-->
                                         </div>
                                    </div>
                               </div>
@@ -76,9 +76,9 @@ https://templatemo.com/tm-516-known
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
-                                             <h1>Efficient Learning Methods</h1>
+                                             <!--<h1>Efficient Learning Methods</h1>
                                              <h3>Nam eget sapien vel nibh euismod vulputate in vel nibh. Quisque eu ex eu urna venenatis sollicitudin ut at libero. Visit <a rel="nofollow" href="https://www.facebook.com/templatemo">templatemo</a> page.</h3>
-                                             <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>
+                                             <a href="#contact" class="section-btn btn btn-default smoothScroll">Let's chat</a>-->
                                         </div>
                                    </div>
                               </div>
@@ -91,29 +91,34 @@ https://templatemo.com/tm-516-known
      <!-- FEATURE -->
      <section id="feature">
           <div class="container">
+               <h2 style="margin:1em; text-align: center;">Agenda una cita desde tu hogar</h2>
                <div class="row">
 
                     <div class="col-md-4 col-sm-4">
+
                          <div class="feature-thumb">
                               <span>01</span>
-                              <h3>Trending Courses</h3>
-                              <p>Known is free education HTML Bootstrap Template. You can download and use this for your website.</p>
+                              <h3>Registrate</h3>
+                              <p>Registrate como cliente desde nuestro sitio web
+                              o desde la aplicación.</p>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4">
                          <div class="feature-thumb">
                               <span>02</span>
-                              <h3>Books & Library</h3>
-                              <p>Lorem ipsum dolor sit amet, consectetur adipisicing eiusmod tempor incididunt ut labore et dolore magna.</p>
+                              <h3>Ingresa tus datos.</h3>
+                              <p>Completa tu cuenta ingresando tus datos y
+                              registra tu vehiculo en nuestra base de datos.</p>
                          </div>
                     </div>
 
                     <div class="col-md-4 col-sm-4">
                          <div class="feature-thumb">
                               <span>03</span>
-                              <h3>Certified Teachers</h3>
-                              <p>templatemo provides a wide variety of free Bootstrap Templates for you. Please tell your friends about us. Thank you.</p>
+                              <h3>Crea tu cita</h3>
+                              <p>Elije tu vehiculo y crea una cita reservando la hora
+                              y la fecha que deceas.</p>
                          </div>
                     </div>
 
@@ -160,14 +165,13 @@ https://templatemo.com/tm-516-known
                     <div class="col-md-offset-1 col-md-4 col-sm-12">
                          <div class="entry-form">
                               <form action="#" method="post">
-                                   <h2>Signup today</h2>
-                                   <input type="text" name="full name" class="form-control" placeholder="Full name" required="">
+                                   <h2>Inicia sesión</h2>
 
-                                   <input type="email" name="email" class="form-control" placeholder="Your email address" required="">
+                                   <input type="email" name="email" class="form-control" placeholder="CORREO ELECTRÓNICO">
 
-                                   <input type="password" name="password" class="form-control" placeholder="Your password" required="">
+                                   <input type="password" name="password" class="form-control" placeholder="CONTRASEÑA">
 
-                                   <button class="submit-btn form-control" id="form-submit">Get started</button>
+                                   <button class="submit-btn form-control" id="form-submit">Iniciar Sesión</button>
                               </form>
                          </div>
                     </div>

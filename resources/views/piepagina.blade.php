@@ -33,7 +33,7 @@
                               </div>
                               <address>
                                    <p>+52 33 3270 0880</p>
-                                   <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                                   <p><a href="mailto:mendozagalloj@gmail.com">mendozagalloj@gmail.com</a></p>
                               </address>
 
                               <div class="footer_menu">
