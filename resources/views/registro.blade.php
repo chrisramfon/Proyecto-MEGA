@@ -55,13 +55,14 @@ https://templatemo.com/tm-516-known
     		<div id="formu" align="center" style="margin-bottom: 70px">
     			<br>
     			<br>
-    			<form id="registroUsuario" class="entry-form">
-    				<input type="text" name="nombre" placeholder="NOMBRE" class="form-control">
-    				<input type="text" name="nombre" placeholder="APELLIDO PATERNO" class="form-control">
-    				<input type="text" name="nombre" placeholder="APELLIDO MATERNO" class="form-control">
-    				<input type="text" name="nombre" placeholder="CORREO ELECTRÓNICO" class="form-control">
-    				<input type="text" name="nombre" placeholder="CONTRASEÑA" class="form-control">
-    				<input type="submit" name="enviar" name="enviar" value="REGISTRAR" class="section-btn">
+    			<form id="registroUsuario" class="entry-form" action="registro" method="post">
+    				<input type="text" name="nombre" placeholder="NOMBRE" class="form-control" id="nombre">
+                    {!!$errors->first('nombre', '<div class="">:message*</div>')!!}
+    				<input type="text" name="apellido1" placeholder="APELLIDO PATERNO" class="form-control" id="apellido1">
+    				<input type="text" name="apellido2" placeholder="APELLIDO MATERNO" class="form-control" id="apellido2">
+    				<input type="text" name="correo" placeholder="CORREO ELECTRÓNICO" class="form-control" id="correo">
+    				<input type="text" name="pass" placeholder="CONTRASEÑA" class="form-control" id="pass">
+    				<input type="submit" name="enviar" name="enviar" value="REGISTRAR" class="section-btn" id="enviar">
     			</form>
     		</div>
     	</div>

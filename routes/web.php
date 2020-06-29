@@ -19,3 +19,4 @@ Route::get('/', function () {
 Route::get('/registrar', ['as' => 'registrar',function () {
     return view('registro');
 }]);
+Route::post('registro', 'controlpagina@registrado');
