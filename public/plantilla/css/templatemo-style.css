@@ -464,7 +464,8 @@ https://templatemo.com/tm-516-known
     background: #ffffff;
     position: relative;
     overflow: hidden;
-    text-align: left;
+    text-align: center;
+    align-content: center;
   }
 
   .team-info {
@@ -590,7 +591,10 @@ https://templatemo.com/tm-516-known
   .courses-price.free span {
     background: #3f51b5;
   }
-
+  .logo{
+    width: 100px;
+    height:40px;
+  }
 
 
   /*---------------------------------------

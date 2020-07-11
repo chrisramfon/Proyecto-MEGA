@@ -22,6 +22,7 @@ https://templatemo.com/tm-516-known
      <link rel="stylesheet" href="plantilla/css/font-awesome.min.css">
      <link rel="stylesheet" href="plantilla/css/owl.carousel.css">
      <link rel="stylesheet" href="plantilla/css/owl.theme.default.min.css">
+     <link rel="stylesheet" type="text/css" href="iconos/link/css/fontello.css">
 
      <!-- MAIN CSS -->
      <link rel="stylesheet" href="plantilla/css/templatemo-style.css">
@@ -198,13 +199,10 @@ https://templatemo.com/tm-516-known
                                    <img src="images/author-image1.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>Mark Wilson</h3>
-                                   <span>I love Teaching</span>
+                                   <img src="img/LTH.png" class="logo">
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                                   <li><a href="https://www.lth.com.mx/es-mx/baterias-para-autos" target="_blank"><h1 class="icon-link"></h1></a></li>
                               </ul>
                          </div>
                     </div>
@@ -215,12 +213,10 @@ https://templatemo.com/tm-516-known
                                    <img src="images/author-image2.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>Catherine</h3>
-                                   <span>Education is the key!</span>
+                                   <img class="logo" src="img/AMERICA.png">
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-google"></a></li>
-                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                                   <li><a href="http://autobaterias.com.mx/america.htm" target="_blank"><h1 class="icon-link"></h1></a></li>
                               </ul>
                          </div>
                     </div>
@@ -231,13 +227,10 @@ https://templatemo.com/tm-516-known
                                    <img src="images/author-image3.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>Jessie Ca</h3>
-                                   <span>I like Online Courses</span>
+                                  <img class="logo" src="img/OPTIMA.png">
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-envelope-o"></a></li>
-                                   <li><a href="#" class="fa fa-linkedin"></a></li>
+                                   <li><a href="https://www.optimabatteries.com.mx/es-mx" target="_blank"><h1 class="icon-link"></h1></a></li>
                               </ul>
                          </div>
                     </div>
@@ -248,13 +241,11 @@ https://templatemo.com/tm-516-known
                                    <img src="images/author-image4.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h3>Andrew Berti</h3>
-                                   <span>Learning is fun</span>
+                                   <img src="img/CRONOS.png" class="logo">
                               </div>
                               <ul class="social-icon">
-                                   <li><a href="#" class="fa fa-twitter"></a></li>
-                                   <li><a href="#" class="fa fa-google"></a></li>
-                                   <li><a href="#" class="fa fa-behance"></a></li>
+                                   <li><a href="http://autobaterias.com.mx/crenos.htm" target="_blank"><h1 class="icon-link"></h1></a></li>
+                              
                               </ul>
                          </div>
                     </div>
