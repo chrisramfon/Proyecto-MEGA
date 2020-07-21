@@ -2,9 +2,10 @@
 
 namespace App\Http\Controllers;
 use DB;
+
 use Illuminate\Http\Request;
 
-class ControlVehiculos extends Controller
+class ControlCitas extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,8 +14,8 @@ class ControlVehiculos extends Controller
      */
     public function index()
     {
-        $lista_vehiculos = DB::table('vehiculo')->get();
-        return view('vehiculos.index', compact('lista_vehiculos'));
+        $lista_citas=DB::table('cita')->get();
+        return view('Citas.index', compact('lista_citas'));
     }
 
     /**
@@ -24,7 +25,7 @@ class ControlVehiculos extends Controller
      */
     public function create()
     {
-        return view('vehiculos.create');
+        return view('Citas.create');
     }
 
     /**
@@ -35,21 +36,20 @@ class ControlVehiculos extends Controller
      */
     public function store(Request $request)
     {
-        DB::table('vehiculo')->insert(["matricula"=>$request->input('matricula'), "marca"=>$request->input('marca'), "modelo"=>$request->input('modelo'),]);
+        DB::table('cita')->inster(["hora"=>$request->input('hora'),"fecha"=>$request->input('fecha'), "comentarios"=>$request->input('comentarios')]);
 
-        return redirect()->route('vehiculos.index', compact('vehiculo'));
+        return redirect()->route('Citas.index',compact('Cita_cliente'));
     }
 
     /**
      * Display the specified resource.
-     * @param  string  $matricula
+     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($matricula)
+    public function show($id)
     {
-        $vehiculo = DB::table('vehiculo')->where('matricula', $matricula)->first();
-        return view('vehiculos.show', compact('vehiculo'));
+        //
     }
 
     /**

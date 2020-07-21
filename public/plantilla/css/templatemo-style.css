@@ -200,6 +200,36 @@ https://templatemo.com/tm-516-known
     border-color: transparent;
   }
 
+    /*---------------------------------------
+       Tables              
+  -----------------------------------------*/
+  #tabla-principal{
+  width: auto;
+  height: 1080;
+  padding: 30px;
+  }
+  #tabla-contenedor{
+  height: 900px;
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 100px;
+  }
+  #tabla-titulo{
+  text-align: center;
+  padding: 30px;
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  }
+  #tabla-tabla{
+  padding: 30px;
+  margin-top: 100px;
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 67%;  
+  }
 
 
   /*---------------------------------------
