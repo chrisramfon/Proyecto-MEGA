@@ -51,28 +51,28 @@ https://templatemo.com/tm-516-known
         <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
             <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 100px;">
                 <div id="tabla-titulo" style="background: white; text-align: center; padding: 30px; width: 40%; margin-left: auto; margin-right: auto;">
-                    <h1>Vehículos</h1>
+                    <h1>Clientes</h1>
                 </div>
                 <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
                     <table class="table">
                         <thead>
                            <tr>
                                 <td>Id</td>
-                                <td>Cliente</td>
-                               <td>Matricula</td>
-                               <td>Marca</td>
-                               <td>Modelo</td>
+                                <td>Nombre</td>
+                               <td>Apellido paterno</td>
+                               <td>Apellido materno</td>
+                               <td>Telefono</td>
                                <td></td>
                            </tr> 
                         </thead>
                         <tbody>
-                            @foreach($lista_vehiculos as $vh)
+                            @foreach($lista_clientes as $cl)
                             <tr>
-                                <td> {{$vh->IDcli}} </td>
-                                <td> {{$vh->Nombrecli}} </td>
-                                <td><a href="{{route('vehiculos.show',$vh->matricula)}}">{{$vh->matricula}}</a></td>
-                                <td>{{$vh->marca}}</td>
-                                <td>{{$vh->modelo}}</td>
+                                <td> {{$cl->IDcli}} </td>
+                                <td> {{$cl->Nombrecli}} </td>
+                                <td> {{ $cl->Apellido1 }} </td>
+                                <td>{{ $cl->Apellido2 }}</td>
+                                <td>{{$cl->Telefono}}</td>
                                 <td>
                                    
                                 </td>
@@ -80,7 +80,7 @@ https://templatemo.com/tm-516-known
                             @endforeach
                         </tbody>
                     </table>
-                    <a href="<?php echo route('vehiculos.create'); ?>" class="btn btn-dark">Crear</a>
+                    <a href="<?php echo route('clientes.create'); ?>" class="btn btn-dark">Crear</a>
                 </div>
             </div>
         </div>

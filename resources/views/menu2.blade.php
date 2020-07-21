@@ -19,6 +19,7 @@
                          <li><a href="http://127.0.0.1:8000" class="smoothScroll">Inicio</a></li>
                           <li><a href="<?php echo route('Cita.index'); ?>" class="smoothScroll">Citas</a></li>
                           <li><a href="<?php echo route('vehiculos.index') ?>" class="smoothScroll">Vehiculos</a></li>
+                          <li><a href="<?php echo route('clientes.index') ?>" class="smoothScroll">Clientes</a></li>
                     </ul>
 
                    

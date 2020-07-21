@@ -126,6 +126,8 @@ https://templatemo.com/tm-516-known
     height: 450px;
   }
 
+
+
   .entry-form h2 {
     color: #ffffff;
     margin: 0;
@@ -141,8 +143,10 @@ https://templatemo.com/tm-516-known
     margin: 10px 0;
   }
 
+
+
   .entry-form .submit-btn {
-    background: #ffffff;
+    background: #EA4D1A;
     border-radius: 50px;
     border: 0;
     color: #252020;
@@ -152,10 +156,14 @@ https://templatemo.com/tm-516-known
     margin-bottom: 10px;
   }
 
+
+
   .entry-form .submit-btn:hover {
     background: #3f51b5;
     color: #ffffff;
   }
+
+
 
   section {
     position: relative;
@@ -196,7 +204,7 @@ https://templatemo.com/tm-516-known
   }
 
   .section-btn:hover {
-    background: #ffffff;
+    background: #EA4D1A;
     border-color: transparent;
   }
 
@@ -992,6 +1000,8 @@ https://templatemo.com/tm-516-known
       display: block;
       margin: 0 auto;
     }
+
+
   }
 
 
@@ -1026,5 +1036,7 @@ https://templatemo.com/tm-516-known
       width: inherit;
       height: inherit;
     }
+
+ 
   }
   

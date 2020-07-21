@@ -34,3 +34,9 @@ Route::get('vehiculos/create',['as'=>'vehiculos.create', 'uses'=>'ControlVehicul
 Route::post('vehiculos/store',['as'=>'vehiculos.store', 'uses'=>'ControlVehiculos@store']);
 
 Route::get('vehiculos/{matricula}',['as'=>'vehiculos.show', 'uses'=>'ControlVehiculos@show']);
+
+Route::get('clientes',['as'=>'clientes.index', 'uses'=>'ControlClientes@index']);
+
+Route::get('clientes/create',['as'=>'clientes.create', 'uses'=>'ControlClientes@create']);
+
+Route::post('clientes/store',['as'=>'clientes.store', 'uses'=>'ControlClientes@store']);

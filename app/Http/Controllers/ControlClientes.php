@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use DB;
 use Illuminate\Http\Request;
 
-class ControlVehiculos extends Controller
+class ControlClientes extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,9 +13,8 @@ class ControlVehiculos extends Controller
      */
     public function index()
     {
-        $lista_vehiculos = DB::select('select cl.Nombrecli, vh.*
-    FROM vehiculo vh join cliente cl on cl.IDcli = vh.IDcli');
-        return view('vehiculos.index', compact('lista_vehiculos'));
+        $lista_clientes = DB::select('select * from cliente');
+        return view('clientes.index', compact('lista_clientes'));
     }
 
     /**
@@ -25,7 +24,7 @@ class ControlVehiculos extends Controller
      */
     public function create()
     {
-        return view('vehiculos.create');
+        return view('clientes.create');
     }
 
     /**
@@ -36,21 +35,20 @@ class ControlVehiculos extends Controller
      */
     public function store(Request $request)
     {
-        DB::table('vehiculo')->insert(["matricula"=>$request->input('matricula'), "marca"=>$request->input('marca'), "modelo"=>$request->input('modelo'),]);
+        DB::table('cliente')->insert(["Nombrecli"=>$request->input('nombre'), "Apellido1"=>$request->input('apellido1'), "Apellido2"=>$request->input('apellido2'), "Direccion"=>$request->input('direccion'), "Telefono"=>$request->input('telefono')]);
 
-        return redirect()->route('vehiculos.index', compact('vehiculo'));
+        return redirect()->route('clientes.index', compact('cliente'));
     }
 
     /**
      * Display the specified resource.
-     * @param  string  $matricula
+     *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($matricula)
+    public function show($id)
     {
-        $vehiculo = DB::table('vehiculo')->where('matricula', $matricula)->first();
-        return view('vehiculos.show', compact('vehiculo'));
+        //
     }
 
     /**
