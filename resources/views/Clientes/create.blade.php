@@ -64,7 +64,7 @@ https://templatemo.com/tm-516-known
                     <input type="text" name="direccion" placeholder="DIRECCIÓN" class="form-control" id="direccion">
                     <input type="text" name="telefono" placeholder="TELÉFONO" class="form-control" id="telefono">
                     <input type="text" name="usuario" placeholder="USUARIO" class="form-control" id="usuario">
-                    <input type="text" name="telefono" placeholder="TELÉFONO" class="form-control" id="telefono">
+                    <input type="password" name="contrasenia" placeholder="CONTRASEÑA" class="form-control" id="contrasenia">
                     <input type="submit" name="enviar" name="enviar" value="REGISTRAR" class="section-btn" id="enviar">
                 </form>
             </div>

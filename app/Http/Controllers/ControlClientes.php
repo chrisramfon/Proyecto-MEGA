@@ -35,7 +35,16 @@ class ControlClientes extends Controller
      */
     public function store(Request $request)
     {
+        
         DB::table('cliente')->insert(["Nombrecli"=>$request->input('nombre'), "Apellido1"=>$request->input('apellido1'), "Apellido2"=>$request->input('apellido2'), "Direccion"=>$request->input('direccion'), "Telefono"=>$request->input('telefono')]);
+      
+        DB::table('usuario')->insert(["usuario"=>$request->input('usuario'), "contrasenia"=>$request->input('contrasenia')]);
+
+   $id_lista = DB::table('cliente')
+   ->where([['Nombrecli', $request->input('nombre')],['Telefono', $request->input('telefono')]])->first();
+
+       DB::table('cliente_usuario')
+       ->insert(["IDcli"=>$id_lista->IDcli, "usuario"=>$request->input('usuario')]);
 
         return redirect()->route('clientes.index', compact('cliente'));
     }
