@@ -36,6 +36,9 @@ class ControlVehiculos extends Controller
      */
     public function store(Request $request)
     {
+
+         $validatedData =$request->validate(['matricula'=>'required|max:30','marca'=>'required|max:100','modelo'=>'required|max:100']);
+
         DB::table('vehiculo')->insert(["matricula"=>$request->input('matricula'), "marca"=>$request->input('marca'), "modelo"=>$request->input('modelo'),]);
 
         return redirect()->route('vehiculos.index', compact('vehiculo'));
@@ -85,5 +88,8 @@ class ControlVehiculos extends Controller
     public function destroy($id)
     {
         //
+    }
+    public function vhregistro(Request $request){
+        $this.validate($request, ['matricula'=>'required|max:30','marca'=>'required|max:100','modelo'=>'required|max:100']);
     }
 }

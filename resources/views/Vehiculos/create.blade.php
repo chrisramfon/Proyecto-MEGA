@@ -59,8 +59,11 @@ https://templatemo.com/tm-516-known
                 <form id="registroVehiculo" class="entry-form" method="post" action=" {{ route('vehiculos.store') }} ">
                     {!! csrf_field() !!}
                     <input type="text" name="matricula" placeholder="MATRICULA" class="form-control" id="matricula">
+                    {!!$errors->first('matricula', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="marca" placeholder="MARCA" class="form-control" id="marca">
+                    {!!$errors->first('marca', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="modelo" placeholder="MODELO" class="form-control" id="modelo">
+                    {!!$errors->first('modelo', '<h3 class="alerta">:message</h3>')!!}
                     <input type="submit" name="enviar" name="enviar" value="REGISTRAR" class="section-btn" id="enviar">
                 </form>
             </div>

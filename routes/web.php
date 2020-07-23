@@ -31,6 +31,8 @@ Route::get('vehiculos',['as'=>'vehiculos.index', 'uses'=>'ControlVehiculos@index
 
 Route::get('vehiculos/create',['as'=>'vehiculos.create', 'uses'=>'ControlVehiculos@create']);
 
+Route::post('validacionvh', 'ControlVehiculos@vhregistro');
+
 Route::post('vehiculos/store',['as'=>'vehiculos.store', 'uses'=>'ControlVehiculos@store']);
 
 Route::get('vehiculos/{matricula}',['as'=>'vehiculos.show', 'uses'=>'ControlVehiculos@show']);

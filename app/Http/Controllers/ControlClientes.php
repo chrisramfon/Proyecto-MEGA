@@ -36,6 +36,8 @@ class ControlClientes extends Controller
     public function store(Request $request)
     {
         
+        $validatedData = $request->validate(['nombre'=>'required|max:100','apellido1'=>'required|max:100', 'apellido2'=>'max:100', 'direccion'=>'max:100', 'telefono'=>'max:30', 'usuario'=>'required|max:50', 'contrasenia'=>'required|max:20']);
+
         DB::table('cliente')->insert(["Nombrecli"=>$request->input('nombre'), "Apellido1"=>$request->input('apellido1'), "Apellido2"=>$request->input('apellido2'), "Direccion"=>$request->input('direccion'), "Telefono"=>$request->input('telefono')]);
       
         DB::table('usuario')->insert(["usuario"=>$request->input('usuario'), "contrasenia"=>$request->input('contrasenia')]);

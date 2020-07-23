@@ -59,12 +59,19 @@ https://templatemo.com/tm-516-known
                 <form id="registroCliente" class="entry-form" method="post" action=" {{ route('clientes.store') }} ">
                     {!! csrf_field() !!}
                     <input type="text" name="nombre" placeholder="NOMBRE" class="form-control" id="nombre">
+                    {!!$errors->first('nombre', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="apellido1" placeholder="PATERNO" class="form-control" id="apellido1">
+                    {!!$errors->first('apellido1', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="apellido2" placeholder="MATERNO" class="form-control" id="apellido2">
+                    {!!$errors->first('apellido2', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="direccion" placeholder="DIRECCIÓN" class="form-control" id="direccion">
+                    {!!$errors->first('direccion', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="telefono" placeholder="TELÉFONO" class="form-control" id="telefono">
+                    {!!$errors->first('telefono', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="usuario" placeholder="USUARIO" class="form-control" id="usuario">
+                    {!!$errors->first('usuario', '<h3 class="alerta">:message</h3>')!!}
                     <input type="password" name="contrasenia" placeholder="CONTRASEÑA" class="form-control" id="contrasenia">
+                    {!!$errors->first('contrasenia', '<h3 class="alerta">:message</h3>')!!}
                     <input type="submit" name="enviar" name="enviar" value="REGISTRAR" class="section-btn" id="enviar">
                 </form>
             </div>

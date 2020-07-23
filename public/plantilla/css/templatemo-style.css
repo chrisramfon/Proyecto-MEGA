@@ -55,7 +55,11 @@ https://templatemo.com/tm-516-known
     line-height: 24px;
   }
 
-
+.alerta{
+  font-size: 1em;
+    margin-bottom: 0;
+    color: #FFFFFF;
+}
 
   /*---------------------------------------
      GENERAL               
