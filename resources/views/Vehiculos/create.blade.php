@@ -38,8 +38,24 @@ https://templatemo.com/tm-516-known
                
           </div>
      </section>
+     <!-- Imagen -->
+<section id="home">
+          <div class="row">
 
-
+                    <div class="owl-carousel owl-theme home-slider">
+                         <div class="item item-rvehiculo">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                            <h1>Registro de Vehículo</h1>
+                                             <h3>Ingresa la información para registrar tu vehiculo</h3>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </div>
+     </section>
      <!-- MENU -->
      
 

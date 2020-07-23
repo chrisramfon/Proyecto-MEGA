@@ -434,7 +434,10 @@ https://templatemo.com/tm-516-known
   .home-slider .item-third {
     background-image: url(../images/slider-image3.png);
   }
-
+  .home-slider .item-rvehiculo {
+    background-image: url(../images/RegistroVehiculo.jpg);
+  background-position: center;
+  }
 
 
   /*---------------------------------------
