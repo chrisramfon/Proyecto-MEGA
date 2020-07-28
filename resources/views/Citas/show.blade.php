@@ -55,7 +55,27 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Vehiculo <small></small></h2>
+                              <h2>Cita <small></small></h2>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="/img/cita.png" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h2> Cita </h2>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><h3>Id: {{ $cita->IDcita }}</h3></li>
+                                   <br>
+                                   <li><h3>Hora: {{ $cita->Hora }} </h3></li>
+                                   <li><br></li>
+                                   <li><h3>Fecha: {{ $cita->Fecha }} </h3></li>
+                                   <br>
+                                   <li><h3>Comentarios: {{$cita->Comentarios}}</h3></li>
+                              </ul>
                          </div>
                     </div>
 

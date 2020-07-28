@@ -44,12 +44,12 @@ https://templatemo.com/tm-516-known
           <div class="row">
 
                     <div class="owl-carousel owl-theme home-slider">
-                         <div class="item item-indexvehiculos">
+                         <div class="item item-indexempleados">
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
-                                            <h1>Vehículos</h1>
-                                             <h3>Aqui encontrarás la información de los vehiculos de los clientes</h3>
+                                            <h1>Empleados</h1>
+                                             <h3>Aquí encontrarás información sobre los empleados</h3>
                                         </div>
                                    </div>
                               </div>
@@ -74,29 +74,29 @@ https://templatemo.com/tm-516-known
                         <thead>
                            <tr>
                                 <td>Id</td>
-                                <td>Cliente</td>
-                               <td>Matricula</td>
-                               <td>Marca</td>
-                               <td>Modelo</td>
+                                <td>Nombre</td>
+                               <td>Apellido paterno</td>
+                               <td>Apellido paterno</td>
+                               <td>Telefono</td>
                                <td></td>
                            </tr> 
                         </thead>
                         <tbody>
-                            @foreach($lista_vehiculos as $vh)
+                            @foreach($lista_empleados as $emp)
                             <tr>
-                                <td> {{$vh->IDcli}} </td>
-                                <td> {{$vh->Nombrecli}} </td>
-                                <td>{{$vh->matricula}}</td>
-                                <td>{{$vh->marca}}</td>
-                                <td>{{$vh->modelo}}</td>
+                                <td> {{$emp->IDem}} </td>
+                                <td> {{$emp->Nombreem}} </td>
+                                <td>{{$emp->Apellido1}}</td>
+                                <td>{{$emp->Apellido2}}</td>
+                                <td>{{$emp->Telefono}}</td>
                                 <td>
-                                   <a href="{{route('vehiculos.show',$vh->matricula)}}">Ver</a>
+                                   <a href="{{route('empleados.edit',$emp->IDem)}}">Modificar</a>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
-                    <a href="<?php echo route('vehiculos.create'); ?>" class="btn btn-dark">Crear</a>
+                    <a href="<?php echo route('empleados.create'); ?>" class="btn btn-dark">Crear</a>
                 </div>
             </div>
         </div>

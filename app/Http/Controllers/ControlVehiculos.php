@@ -52,8 +52,16 @@ class ControlVehiculos extends Controller
      */
     public function show($matricula)
     {
+
+/*$lista_vehiculos = DB::select('select cl.Nombrecli, vh.*
+    FROM vehiculo vh join cliente cl on cl.IDcli = vh.IDcli');*/
+
+
+
         $vehiculo = DB::table('vehiculo')->where('matricula', $matricula)->first();
-        return view('vehiculos.show', compact('vehiculo'));
+        $id = DB::table('vehiculo')->select('IDcli')->where('matricula', $matricula)->first();
+        $cliente = DB::table('cliente')->where('IDcli', $id->IDcli)->first();
+        return view('vehiculos.show', compact('vehiculo','cliente'));
     }
 
     /**

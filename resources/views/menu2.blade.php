@@ -20,6 +20,7 @@
                           <li><a href="<?php echo route('Cita.index'); ?>" class="smoothScroll">Citas</a></li>
                           <li><a href="<?php echo route('vehiculos.index') ?>" class="smoothScroll">Vehiculos</a></li>
                           <li><a href="<?php echo route('clientes.index') ?>" class="smoothScroll">Clientes</a></li>
+                          <li><a href=" <?php echo route('empleados.index') ?> " class="smoothScroll">Empleados</a></li>
                     </ul>
 
                    

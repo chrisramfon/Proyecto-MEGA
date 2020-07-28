@@ -38,19 +38,17 @@ https://templatemo.com/tm-516-known
                
           </div>
      </section>
-
-
      <!-- Imagen -->
-     <section id="home">
+<section id="home">
           <div class="row">
 
                     <div class="owl-carousel owl-theme home-slider">
-                         <div class="item item-rcliente">
+                         <div class="item item-modificarempleado">
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
-                                            <h1>Registro de cliente</h1>
-                                             <h3>Ingresa la información del cliente para registrarlo</h3>
+                                            <h1>Modificación de empleado</h1>
+                                             <h3>Modifica solo la información que deseas cambiar</h3>
                                         </div>
                                    </div>
                               </div>
@@ -58,8 +56,6 @@ https://templatemo.com/tm-516-known
                     </div>
           </div>
      </section>
-
-
      <!-- MENU -->
      
 
@@ -69,34 +65,30 @@ https://templatemo.com/tm-516-known
             @extends('menu2')
         </div>
         <div id="titulo" class="section-tittle" align="center" style="margin-top: 70px;">
-            <h2>&nbsp</h2>
+            <h2>Modificar
+            <small><br>Para guardar los cambios da clic en "Guardar"</small></h2>
         </div>
         <div id="media">
             <div id="formu" align="center" style="margin-bottom: 70px">
                 <br>
                 <br>
-                <form id="registroCliente" class="entry-form" method="post" action=" {{ route('clientes.store') }} ">
+                <form id="registroEmpleado" class="entry-form" method="post" action="{{ route('empleados.update', $empleado_editar->IDem)}}">
+                    {!!method_field('PUT')!!}
                     {!! csrf_field() !!}
-                    <input type="text" name="nombre" placeholder="NOMBRE" class="form-control" id="nombre">
+                    <input type="text" name="nombre" placeholder="NOMBRE" class="form-control" id="nombre" value=" {{$empleado_editar->Nombreem}} ">
                     {!!$errors->first('nombre', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="apellido1" placeholder="PATERNO" class="form-control" id="apellido1">
+                    <input type="text" name="apellido1" placeholder="PATERNO" class="form-control" id="apellido1" value=" {{$empleado_editar->Apellido1}} ">
                     {!!$errors->first('apellido1', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="apellido2" placeholder="MATERNO" class="form-control" id="apellido2">
+                    <input type="text" name="apellido2" placeholder="MATERNO" class="form-control" id="apellido2" value=" {{$empleado_editar->Apellido2}} ">
                     {!!$errors->first('apellido2', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="direccion" placeholder="DIRECCIÓN" class="form-control" id="direccion">
+                    <input type="text" name="direccion" placeholder="DIRECCIÓN" class="form-control" id="direccion" value=" {{$empleado_editar->Direccion}} ">
                     {!!$errors->first('direccion', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="telefono" placeholder="TELÉFONO" class="form-control" id="telefono">
+                    <input type="text" name="telefono" placeholder="TELEFONO" class="form-control" id="telefono" value=" {{$empleado_editar->Telefono}} ">  
                     {!!$errors->first('telefono', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="usuario" placeholder="USUARIO" class="form-control" id="usuario">
-                    {!!$errors->first('usuario', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="password" name="contrasenia" placeholder="CONTRASEÑA" class="form-control" id="contrasenia">
-                    {!!$errors->first('contrasenia', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="submit" name="enviar" name="enviar" value="REGISTRAR" class="section-btn" id="enviar">
+                    <input type="submit" name="enviar" name="enviar" value="GUARDAR" class="section-btn" id="enviar">
                 </form>
             </div>
         </div>
-
-
         <div id="footer">
             @extends('piepagina')
         </div>

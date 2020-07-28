@@ -39,6 +39,25 @@ https://templatemo.com/tm-516-known
           </div>
      </section>
 
+<!-- Imagen -->
+     <section id="home">
+          <div class="row">
+
+                    <div class="owl-carousel owl-theme home-slider">
+                         <div class="item item-indexclientes">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                            <h1>Clientes</h1>
+                                             <h3>Aqui encontrarás la información de los clientes registrados</h3>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </div>
+     </section>
+
 
      <!-- MENU -->
      
@@ -50,9 +69,6 @@ https://templatemo.com/tm-516-known
         </div>
         <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
             <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 100px;">
-                <div id="tabla-titulo" style="background: white; text-align: center; padding: 30px; width: 40%; margin-left: auto; margin-right: auto;">
-                    <h1>Clientes</h1>
-                </div>
                 <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
                     <table class="table">
                         <thead>
@@ -74,7 +90,7 @@ https://templatemo.com/tm-516-known
                                 <td>{{ $cl->Apellido2 }}</td>
                                 <td>{{$cl->Telefono}}</td>
                                 <td>
-                                   
+                                   <a href="{{route('clientes.edit',$cl->IDcli)}}" class="btn btn-dark">Modificar</a>
                                 </td>
                             </tr>
                             @endforeach

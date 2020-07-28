@@ -438,7 +438,39 @@ https://templatemo.com/tm-516-known
     background-image: url(../images/RegistroVehiculo.jpg);
   background-position: center;
   }
+  .home-slider .item-indexvehiculos {
+    background-image: url(../images/IndexVehiculos.jpg);
+  background-position: center;
+  }
 
+  .home-slider .item-indexempleados {
+    background-image: url(../images/IndexEmpleados.jpg);
+  background-position: center;
+  }
+
+  .home-slider .item-modificarempleado {
+    background-image: url(../images/ModificarEmpleado.jpg);
+  background-position: center;
+  }
+
+  .home-slider .item-indexclientes {
+    background-image: url(../images/IndexClientes.jpg);
+  background-position: center;
+  }
+   .home-slider .item-rcliente {
+    background-image: url(../images/RegistroCliente.jpg);
+  background-position: center;
+  }
+
+  .home-slider .item-modificarcliente {
+    background-image: url(../images/ModificarCliente.jpg);
+  background-position: center;
+  }
+
+.home-slider .item-indexcitas {
+    background-image: url(../images/IndexCitas.jpg);
+  background-position: center;
+  }
 
   /*---------------------------------------
       FEATURE              

@@ -38,19 +38,17 @@ https://templatemo.com/tm-516-known
                
           </div>
      </section>
-
-
      <!-- Imagen -->
-     <section id="home">
+<section id="home">
           <div class="row">
 
                     <div class="owl-carousel owl-theme home-slider">
-                         <div class="item item-rcliente">
+                         <div class="item item-rvehiculo">
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
-                                            <h1>Registro de cliente</h1>
-                                             <h3>Ingresa la información del cliente para registrarlo</h3>
+                                            <h1>Registro de Empleado</h1>
+                                             <h3>Ingresa la información para registrar a un empleado</h3>
                                         </div>
                                    </div>
                               </div>
@@ -58,8 +56,6 @@ https://templatemo.com/tm-516-known
                     </div>
           </div>
      </section>
-
-
      <!-- MENU -->
      
 
@@ -69,13 +65,14 @@ https://templatemo.com/tm-516-known
             @extends('menu2')
         </div>
         <div id="titulo" class="section-tittle" align="center" style="margin-top: 70px;">
-            <h2>&nbsp</h2>
+            <h2>Registro
+            <small><br>Ingresa la información del empleado</small></h2>
         </div>
         <div id="media">
             <div id="formu" align="center" style="margin-bottom: 70px">
                 <br>
                 <br>
-                <form id="registroCliente" class="entry-form" method="post" action=" {{ route('clientes.store') }} ">
+                <form id="registroEmpleado" class="entry-form" method="post" action=" {{ route('empleados.store') }} ">
                     {!! csrf_field() !!}
                     <input type="text" name="nombre" placeholder="NOMBRE" class="form-control" id="nombre">
                     {!!$errors->first('nombre', '<h3 class="alerta">:message</h3>')!!}
@@ -85,18 +82,16 @@ https://templatemo.com/tm-516-known
                     {!!$errors->first('apellido2', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="direccion" placeholder="DIRECCIÓN" class="form-control" id="direccion">
                     {!!$errors->first('direccion', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="telefono" placeholder="TELÉFONO" class="form-control" id="telefono">
+                    <input type="text" name="telefono" placeholder="TELEFONO" class="form-control" id="telefono">  
                     {!!$errors->first('telefono', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="usuario" placeholder="USUARIO" class="form-control" id="usuario">
+                    <input type="text" name="usuario" placeholder="USUARIO" class="form-control" id="usuario">  
                     {!!$errors->first('usuario', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="password" name="contrasenia" placeholder="CONTRASEÑA" class="form-control" id="contrasenia">
+                    <input type="password" name="contrasenia" placeholder="CONTRASEÑA" class="form-control" id="contrasenia">  
                     {!!$errors->first('contrasenia', '<h3 class="alerta">:message</h3>')!!}
                     <input type="submit" name="enviar" name="enviar" value="REGISTRAR" class="section-btn" id="enviar">
                 </form>
             </div>
         </div>
-
-
         <div id="footer">
             @extends('piepagina')
         </div>

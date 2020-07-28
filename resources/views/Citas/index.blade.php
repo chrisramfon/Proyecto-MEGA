@@ -39,6 +39,24 @@ https://templatemo.com/tm-516-known
           </div>
      </section>
 
+      <!-- Imagen -->
+<section id="home">
+          <div class="row">
+
+                    <div class="owl-carousel owl-theme home-slider">
+                         <div class="item item-indexcitas">
+                              <div class="caption">
+                                   <div class="container">
+                                        <div class="col-md-6 col-sm-12">
+                                            <h1>Citas</h1>
+                                             <h3>Aquí encontrarás información sobre las citas</h3>
+                                        </div>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+          </div>
+     </section>
 
      <!-- MENU -->
      
@@ -50,13 +68,11 @@ https://templatemo.com/tm-516-known
         </div>
         <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
             <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 100px;">
-                <div id="tabla-titulo" style="background: white; text-align: center; padding: 30px; width: 40%; margin-left: auto; margin-right: auto;">
-                    <h1>Citas</h1>
-                </div>
                 <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
                     <table class="table">
                         <thead>
                            <tr>
+                               <td>Id</td>
                                <td>Hora</td>
                                <td>Fecha</td>
                                <td>Comenarios</td>
@@ -66,10 +82,11 @@ https://templatemo.com/tm-516-known
                         <tbody>
                             @foreach($lista_citas as $ct)
                             <tr>
-                                <td>{{$ct->hora}}</td>
-                                <td>{{$ct->fecha}}</td>
+                                <td> {{$ct->IDcita}} </td>
+                                <td>{{$ct->Hora}}</td>
+                                <td>{{$ct->Fecha}}</td>
                                 <td>{{$ct->Comentarios}}</td>
-                                <td></td>
+                                <td><a href="{{route('citas.show',$ct->IDcita)}}" class="btn btn-dark">Ver</a></td>
                             </tr>
                             @endforeach
                         </tbody>

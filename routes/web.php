@@ -27,6 +27,8 @@ Route::get('Citas/index', ['as' => 'Cita.index', 'uses'=>'ControlCitas@index']);
 
 Route::post('Citas/store',['as'=>'Cita.store', 'uses'=>'ControlCitas@store']);
 
+Route::get('citas/{IDcita}',['as'=>'citas.show', 'uses'=>'ControlCitas@show']);
+
 Route::get('vehiculos',['as'=>'vehiculos.index', 'uses'=>'ControlVehiculos@index']);
 
 Route::get('vehiculos/create',['as'=>'vehiculos.create', 'uses'=>'ControlVehiculos@create']);
@@ -42,3 +44,17 @@ Route::get('clientes',['as'=>'clientes.index', 'uses'=>'ControlClientes@index'])
 Route::get('clientes/create',['as'=>'clientes.create', 'uses'=>'ControlClientes@create']);
 
 Route::post('clientes/store',['as'=>'clientes.store', 'uses'=>'ControlClientes@store']);
+
+Route::get('clientes/{IDcli}/edit',['as'=>'clientes.edit', 'uses'=>'ControlClientes@edit']);
+
+Route::put('clientes/{IDcli}',['as'=>'clientes.update', 'uses'=>'ControlClientes@update']);
+
+Route::get('Empleados', ['as'=>'empleados.index', 'uses'=>'ControlEmpleados@index']);
+
+Route::get('empleados/create', ['as'=>'empleados.create', 'uses'=>'ControlEmpleados@create']);
+
+Route::post('empleados/store', ['as'=>'empleados.store', 'uses'=>'ControlEmpleados@store']);
+
+Route::get('empleados/{IDem}/edit',['as'=>'empleados.edit', 'uses'=>'ControlEmpleados@edit']);
+
+Route::put('empleados/{IDem}', ['as'=>'empleados.update', 'uses'=>'ControlEmpleados@update']);

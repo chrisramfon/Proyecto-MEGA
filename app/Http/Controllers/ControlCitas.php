@@ -14,7 +14,7 @@ class ControlCitas extends Controller
      */
     public function index()
     {
-        $lista_citas=DB::table('cita')->get();
+        $lista_citas=DB::select('select * from cita');
         return view('Citas.index', compact('lista_citas'));
     }
 
@@ -44,12 +44,15 @@ class ControlCitas extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $IDcita
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($IDcita)
     {
-        //
+         $cita = DB::table('cita')->where('IDcita', $IDcita)->first();
+         $cliente = DB::table('cliente')->where('IDcli', $cita->IDcli)->first();
+         $vehiculo = DB::table('vehiculo')->where('Matricula', $cita->Matricula)->first();
+         return view('citas.show', compact('cita','cliente', 'vehiculo'));
     }
 
     /**

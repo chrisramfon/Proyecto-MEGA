@@ -36,11 +36,11 @@ class ControlClientes extends Controller
     public function store(Request $request)
     {
         
-        $validatedData = $request->validate(['nombre'=>'required|max:100','apellido1'=>'required|max:100', 'apellido2'=>'max:100', 'direccion'=>'max:100', 'telefono'=>'max:30', 'usuario'=>'required|max:50', 'contrasenia'=>'required|max:20']);
+        $validatedData = $request->validate(['nombre'=>'required|max:100','apellido1'=>'required|max:100', 'apellido2'=>'max:100', 'direccion'=>'max:100', 'telefono'=>'required|max:30', 'usuario'=>'required|max:50', 'contrasenia'=>'required|max:20']);
 
         DB::table('cliente')->insert(["Nombrecli"=>$request->input('nombre'), "Apellido1"=>$request->input('apellido1'), "Apellido2"=>$request->input('apellido2'), "Direccion"=>$request->input('direccion'), "Telefono"=>$request->input('telefono')]);
       
-        DB::table('usuario')->insert(["usuario"=>$request->input('usuario'), "contrasenia"=>$request->input('contrasenia')]);
+        DB::table('usuario')->insert(["usuario"=>$request->input('usuario'), "contrasenia"=>$request->input('contrasenia'), "tipo"=>'C']);
 
    $id_lista = DB::table('cliente')
    ->where([['Nombrecli', $request->input('nombre')],['Telefono', $request->input('telefono')]])->first();
@@ -65,24 +65,36 @@ class ControlClientes extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $IDcli
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($IDcli)
     {
-        //
+       $cliente_editar=DB::table('cliente')->where('IDcli',$IDcli)->first();
+        return view('clientes.edit', compact('cliente_editar'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $IDcli
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $IDcli)
     {
-        //
+
+ $validatedData = $request->validate(['nombre'=>'required|max:100','apellido1'=>'required|max:100', 'apellido2'=>'max:100', 'direccion'=>'max:100', 'telefono'=>'required|max:30']);
+
+        DB::table('cliente')->where('IDcli', $IDcli)->update([
+            "Nombrecli"=>$request->input('nombre'),
+            "Apellido1" => $request->input('apellido1'),
+            "Apellido2" => $request->input('apellido2'),
+            "Direccion" => $request->input('direccion'),
+            "Telefono" => $request->input('telefono'),
+        ]);
+
+        return redirect()->route('clientes.index');
     }
 
     /**
