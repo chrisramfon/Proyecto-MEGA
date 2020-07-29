@@ -54,12 +54,17 @@ class ControlClientes extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $IDcli
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($IDcli)
     {
-        //
+       $cliente = DB::table('cliente')->where('IDcli', $IDcli)->first();
+    $lista_vehiculos = DB::table('vehiculo')->where('IDcli', $IDcli)->paginate(10);
+    $num_vh = DB::table('vehiculo')->where('IDcli', $IDcli)->count();
+    $num_citas = DB::table('cita')->where('IDcli', $IDcli)->count();
+        return view('clientes.show', compact('cliente', 'lista_vehiculos', 'num_vh', 'num_citas'));
+        
     }
 
     /**

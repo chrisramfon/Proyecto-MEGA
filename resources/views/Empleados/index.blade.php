@@ -91,6 +91,7 @@ https://templatemo.com/tm-516-known
                                 <td>{{$emp->Telefono}}</td>
                                 <td>
                                    <a href="{{route('empleados.edit',$emp->IDem)}}">Modificar</a>
+                                   <a href="{{route('empleados.show',$emp->IDem)}}">Ver</a>
                                 </td>
                             </tr>
                             @endforeach

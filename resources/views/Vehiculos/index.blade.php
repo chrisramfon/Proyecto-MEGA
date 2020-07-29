@@ -96,6 +96,8 @@ https://templatemo.com/tm-516-known
                             @endforeach
                         </tbody>
                     </table>
+                    <div style="float: right;">{{ $lista_vehiculos->links() }}</div>
+                    
                     <a href="<?php echo route('vehiculos.create'); ?>" class="btn btn-dark">Crear</a>
                 </div>
             </div>

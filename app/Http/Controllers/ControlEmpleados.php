@@ -55,12 +55,15 @@ class ControlEmpleados extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $IDem
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($IDem)
     {
-        //
+        $empleado = DB::table('empleado')->where('IDem', $IDem)->first();
+
+        $num_citas = DB::table('cita')->where('IDem', $IDem)->count();
+        return view('empleados.show', compact('empleado', 'num_citas'));
     }
 
     /**

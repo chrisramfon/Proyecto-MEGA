@@ -55,28 +55,91 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Vehiculo <small></small></h2>
+                              <h2>Cliente<small></small></h2>
                          </div>
                     </div>
 
                     <div class="col-md-3 col-sm-6">
                          <div class="team-thumb">
                               <div class="team-image">
-                                   <img src="/img/carro.jpg" class="img-responsive" alt="">
+                                   <img src="/img/cliente.png" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h2> {{ $vehiculo->matricula }} </h2>
+                                   <h2> Cliente </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3> {{ $vehiculo->marca }} </h3></li>
-                                   <li><br></li>
-                                   <li><h3> {{ $vehiculo->modelo }} </h3></li>
+                                   <li><h3>ID:</h3>{{ $cliente->IDcli }}</li>
+                                   <br>
+                                   <li><h3>Nombre:  </h3>{{ $cliente->Nombrecli }} {{$cliente->Apellido1}} {{$cliente->Apellido2}}</li>
+                                   <br>
+                                   <li><h3>Dirección:  <a href="https://maps.google.com/?q={{$cliente->Direccion}}" target="_blank"></h3>{{ $cliente->Direccion }}</a></li>
+                                   <br>
+                                   <li><h3>Telefono: </h3>{{$cliente->Telefono}} </li>
                               </ul>
                          </div>
+                    </div>
+
+                     <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="/img/cliente.png" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h2> Adicionales </h2>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><h3>Número de vehiculos:</h3>{{ $num_vh}}</li>
+                                   <br>
+                                   <li><h3>Número de citas:  </h3>{{ $num_citas }}</li>
+                                   <br>
+                                   <li><h3>Dirección: </h3>{{$cliente->Direccion}} </li>
+                                   <br>
+                                   <li><h3>Telefono: </h3>{{$cliente->Telefono}} </li>
+                              </ul>
+                         </div>
+
+                         
                     </div>
                </div>
           </div>
      </section>
+
+     <div id="principal">
+      <div class="titulo" style="margin-top: 1em;">
+        <h3 style="text-align: center;">Vehiculos</h3>
+      </div>
+        <div id="header">
+            @extends('menu2')
+        </div>
+        <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
+            <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 50px;">
+                <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
+                    <table class="table">
+                        <thead>
+                           <tr>
+                               <td>Matricula</td>
+                               <td>Marca</td>
+                               <td>Modelo</td>
+                               <td></td>
+                           </tr> 
+                        </thead>
+                        <tbody>
+                            @foreach($lista_vehiculos as $vh)
+                            <tr>
+                                <td>{{$vh->matricula}}</td>
+                                <td>{{$vh->marca}}</td>
+                                <td>{{$vh->modelo}}</td>
+                                <td>
+                                   <a href="{{route('vehiculos.show',$vh->matricula)}}">Ver</a>
+                                </td>
+                            </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                    <div style="float: right;">{{ $lista_vehiculos->links() }}</div>
+                </div>
+            </div>
+        </div>
 
         <div id="footer">
             @extends('piepagina')

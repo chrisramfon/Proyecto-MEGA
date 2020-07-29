@@ -91,6 +91,7 @@ https://templatemo.com/tm-516-known
                                 <td>{{$cl->Telefono}}</td>
                                 <td>
                                    <a href="{{route('clientes.edit',$cl->IDcli)}}" class="btn btn-dark">Modificar</a>
+                                    <a href="{{route('clientes.show',$cl->IDcli)}}">Ver</a>
                                 </td>
                             </tr>
                             @endforeach

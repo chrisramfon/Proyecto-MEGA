@@ -55,7 +55,7 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Vehiculo <small></small></h2>
+                              <h2>Empleado <small></small></h2>
                          </div>
                     </div>
 
@@ -65,14 +65,16 @@ https://templatemo.com/tm-516-known
                                    <img src="/img/carro.jpg" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h2> Vehículo </h2>
+                                   <h2> Empleado </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3>Matricula: {{ $vehiculo->matricula }}</h3></li>
+                                   <li><h3>ID: </h3>{{ $empleado->IDem }}</li>
                                    <br>
-                                   <li><h3>Marca: {{ $vehiculo->marca }} </h3></li>
-                                   <li><br></li>
-                                   <li><h3>Modelo: {{ $vehiculo->modelo }} </h3></li>
+                                   <li><h3>Nombre: </h3>{{ $empleado->Nombreem }} {{$empleado->Apellido1}} {{$empleado->Apellido2}} </li>
+                                   <br>
+                                   <li><h3><a href="https://maps.google.com/?q={{$empleado->Direccion}}" target="_blank">Dirección:  </h3>{{ $empleado->Direccion }}</a></li>
+                                   <br>
+                                   <li><h3>Teléfono:  </h3>{{ $empleado->Telefono }}</li>
                               </ul>
                          </div>
                     </div>
@@ -82,12 +84,12 @@ https://templatemo.com/tm-516-known
                                    <img src="/img/cliente.png" class="img-responsive" alt="">
                               </div>
                               <div class="team-info">
-                                   <h2> Dueño </h2>
+                                   <h2> Adicionales </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3>Nombre: {{ $cliente->Nombrecli }}  {{ $cliente->Apellido1 }} </h3></li>
+                                   <li><h3>Citas atendidas:  </h3> {{$num_citas}} </li>
                                    <br>
-                                   <li><h3>Telefono: {{ $cliente->Telefono }} </h3></li>
+                                   <li><h3>Telefono: </h3></li>
                               </ul>
                          </div>
                     </div>

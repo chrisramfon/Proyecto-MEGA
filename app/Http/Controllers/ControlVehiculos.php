@@ -13,8 +13,12 @@ class ControlVehiculos extends Controller
      */
     public function index()
     {
-        $lista_vehiculos = DB::select('select cl.Nombrecli, vh.*
+      /*  $lista_vehiculos = DB::select('select cl.Nombrecli, vh.*
     FROM vehiculo vh join cliente cl on cl.IDcli = vh.IDcli');
+        */
+
+        $lista_vehiculos = DB::table('vehiculo')
+        ->join('cliente', 'cliente.IDcli', '=', 'vehiculo.IDcli')->paginate(10);
         return view('vehiculos.index', compact('lista_vehiculos'));
     }
 

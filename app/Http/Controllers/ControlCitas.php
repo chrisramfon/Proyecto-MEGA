@@ -52,7 +52,8 @@ class ControlCitas extends Controller
          $cita = DB::table('cita')->where('IDcita', $IDcita)->first();
          $cliente = DB::table('cliente')->where('IDcli', $cita->IDcli)->first();
          $vehiculo = DB::table('vehiculo')->where('Matricula', $cita->Matricula)->first();
-         return view('citas.show', compact('cita','cliente', 'vehiculo'));
+         $empleado = DB::table('empleado')->where('IDem', $cita->IDem)->first();
+         return view('citas.show', compact('cita','cliente', 'vehiculo', 'empleado'));
     }
 
     /**

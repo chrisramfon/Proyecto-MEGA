@@ -68,13 +68,13 @@ https://templatemo.com/tm-516-known
                                    <h2> Cita </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3>Id: {{ $cita->IDcita }}</h3></li>
+                                   <li><h3>Id: </h3>{{ $cita->IDcita }}</li>
                                    <br>
-                                   <li><h3>Hora: {{ $cita->Hora }} </h3></li>
-                                   <li><br></li>
-                                   <li><h3>Fecha: {{ $cita->Fecha }} </h3></li>
+                                   <li><h3>Hora: </h3>{{ $cita->Hora }} </li>
                                    <br>
-                                   <li><h3>Comentarios: {{$cita->Comentarios}}</h3></li>
+                                   <li><h3>Fecha: </h3>{{ $cita->Fecha }} </li>
+                                   <br>
+                                   <li><h3>Comentarios: </h3>{{$cita->Comentarios}}</li>
                               </ul>
                          </div>
                     </div>
@@ -88,11 +88,11 @@ https://templatemo.com/tm-516-known
                                    <h2> Vehículo </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3>Matricula: {{ $vehiculo->matricula }}</h3></li>
+                                   <li><h3>Matricula: </h3>{{ $vehiculo->matricula }}</li>
                                    <br>
-                                   <li><h3>Marca: {{ $vehiculo->marca }} </h3></li>
-                                   <li><br></li>
-                                   <li><h3>Modelo: {{ $vehiculo->modelo }} </h3></li>
+                                   <li><h3>Marca: </h3>{{ $vehiculo->marca }} </li>
+                                   <br>
+                                   <li><h3>Modelo: </h3>{{ $vehiculo->modelo }} </li>
                               </ul>
                          </div>
                     </div>
@@ -105,9 +105,25 @@ https://templatemo.com/tm-516-known
                                    <h2> Dueño </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3>Nombre: {{ $cliente->Nombrecli }}  {{ $cliente->Apellido1 }} </h3></li>
+                                   <li><h3>Nombre: </h3>{{ $cliente->Nombrecli }}  {{ $cliente->Apellido1 }} {{$cliente->Apellido2}} </li>
                                    <br>
-                                   <li><h3>Telefono: {{ $cliente->Telefono }} </h3></li>
+                                   <li><h3>Telefono: </h3>{{ $cliente->Telefono }} </li>
+                              </ul>
+                         </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6">
+                         <div class="team-thumb">
+                              <div class="team-image">
+                                   <img src="/img/cliente.png" class="img-responsive" alt="">
+                              </div>
+                              <div class="team-info">
+                                   <h2> Encargado </h2>
+                              </div>
+                              <ul class="social-icon">
+                                   <li><h3>Nombre: </h3>{{ $empleado->Nombreem }}  {{ $empleado->Apellido1 }} {{$empleado->Apellido2}} </li>
+                                   <br>
+                                   <li><h3>Telefono: </h3>{{ $empleado->Telefono }} </li>
                               </ul>
                          </div>
                     </div>

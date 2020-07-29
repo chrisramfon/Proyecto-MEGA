@@ -49,6 +49,8 @@ Route::get('clientes/{IDcli}/edit',['as'=>'clientes.edit', 'uses'=>'ControlClien
 
 Route::put('clientes/{IDcli}',['as'=>'clientes.update', 'uses'=>'ControlClientes@update']);
 
+Route::get('clientes/{IDcli}',['as'=>'clientes.show', 'uses'=>'ControlClientes@show']);
+
 Route::get('Empleados', ['as'=>'empleados.index', 'uses'=>'ControlEmpleados@index']);
 
 Route::get('empleados/create', ['as'=>'empleados.create', 'uses'=>'ControlEmpleados@create']);
@@ -58,3 +60,5 @@ Route::post('empleados/store', ['as'=>'empleados.store', 'uses'=>'ControlEmplead
 Route::get('empleados/{IDem}/edit',['as'=>'empleados.edit', 'uses'=>'ControlEmpleados@edit']);
 
 Route::put('empleados/{IDem}', ['as'=>'empleados.update', 'uses'=>'ControlEmpleados@update']);
+
+Route::get('empleados/{IDem}',['as'=>'empleados.show', 'uses'=>'ControlEmpleados@show']);
