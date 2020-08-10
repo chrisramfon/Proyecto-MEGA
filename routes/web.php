@@ -16,6 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('index');
 });
+
+Route::get('/', ['as'=>'index', 'uses'=>'controlpagina@inicio']);
+
 Route::get('/registrar', ['as' => 'registrar',function () {
     return view('registro');
 }]);
@@ -28,6 +31,10 @@ Route::get('Citas/index', ['as' => 'Cita.index', 'uses'=>'ControlCitas@index']);
 Route::post('Citas/store',['as'=>'Cita.store', 'uses'=>'ControlCitas@store']);
 
 Route::get('citas/{IDcita}',['as'=>'citas.show', 'uses'=>'ControlCitas@show']);
+
+Route::get('citas/{IDcita}/edit',['as'=>'citas.edit', 'uses'=>'ControlCitas@edit']);
+
+Route::put('citas/{IDcita}',['as'=>'citas.update', 'uses'=>'ControlCitas@update']);
 
 Route::get('vehiculos',['as'=>'vehiculos.index', 'uses'=>'ControlVehiculos@index']);
 
@@ -62,3 +69,7 @@ Route::get('empleados/{IDem}/edit',['as'=>'empleados.edit', 'uses'=>'ControlEmpl
 Route::put('empleados/{IDem}', ['as'=>'empleados.update', 'uses'=>'ControlEmpleados@update']);
 
 Route::get('empleados/{IDem}',['as'=>'empleados.show', 'uses'=>'ControlEmpleados@show']);
+
+Route::post('login',['as' => 'login', 'uses' => 'ControlLogin@login' ]);
+
+Route::get('salir',['as' => 'salir', 'uses' => 'ControlLogin@salir']);

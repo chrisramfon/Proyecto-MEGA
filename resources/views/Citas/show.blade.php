@@ -48,7 +48,11 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-       
+       @if ($cita->estado == 'Inactivo')
+       <div style="background: #FF0000; margin: 0; width: auto; height: 40px;">
+       </div>
+       <div style="background: #FFFFFF; text-align: center;"><h1>Inactivo</h1></div>
+       @endif
         <section id="team">
           <div class="container">
                <div class="row">

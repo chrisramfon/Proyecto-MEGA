@@ -61,6 +61,71 @@ https://templatemo.com/tm-516-known
     color: #FFFFFF;
 }
 
+/*---------------------------------------
+     Select               
+  -----------------------------------------*/
+
+/* The container must be positioned relative: */
+.custom-select {
+  position: relative;
+  margin-bottom: 10px;
+  border-color: #555555;
+}
+
+.custom-select select {
+  display: none;
+}
+
+.select-selected {
+  background-color: #252020;
+}
+
+/* Style the arrow inside the select element: */
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/* Point the arrow upwards when the select box is open (active): */
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/* style the items (options), including the selected item: */
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+}
+
+/* Style items (options): */
+.select-items {
+  position: absolute;
+  background-color: #555555;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/* Hide the items when the select box is closed: */
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
   /*---------------------------------------
      GENERAL               
   -----------------------------------------*/
@@ -469,6 +534,11 @@ https://templatemo.com/tm-516-known
 
 .home-slider .item-indexcitas {
     background-image: url(../images/IndexCitas.jpg);
+  background-position: center;
+  }
+
+  .home-slider .item-estadocitas {
+    background-image: url(../images/EstadoCita.jpg);
   background-position: center;
   }
 
@@ -925,7 +995,7 @@ https://templatemo.com/tm-516-known
 
   .social-icon li a {
     border-radius: 100px;
-    color: #29ca8e;
+    color: #EA4D1A;
     font-size: 15px;
     width: 35px;
     height: 35px;
@@ -1037,6 +1107,26 @@ https://templatemo.com/tm-516-known
     .entry-form {
       display: block;
       margin: 0 auto;
+    }
+
+    #tabla-principal{
+      width: 100%;
+      height: auto;
+      margin: 0;
+    }
+
+    #tabla-contenedor{
+      width: 100%;
+      height: auto;
+      padding: 0;
+      margin: 0;
+    }
+
+    #tabla-tabla{
+      padding: 5px;
+  margin-top: 20px;
+  width: 110%;
+  height: auto; 
     }
 
 

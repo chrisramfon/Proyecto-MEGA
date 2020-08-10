@@ -85,6 +85,12 @@ https://templatemo.com/tm-516-known
                     {!!$errors->first('direccion', '<h3 class="alerta">:message</h3>')!!}
                     <input type="text" name="telefono" placeholder="TELÉFONO" class="form-control" id="telefono" value=" {{ $cliente_editar->Telefono }} ">
                     {!!$errors->first('telefono', '<h3 class="alerta">:message</h3>')!!}
+                    <div class="custom-select">
+                    <select name="estado" id="estado">
+                        <option value="Activo">Activo</option>
+                        <option value="Inactivo">Inactivo</option>
+                    </select>
+                    </div>
                     <input type="submit" name="enviar" name="enviar" value="GUARDAR" class="section-btn" id="enviar">
                 </form>
             </div>
@@ -102,6 +108,7 @@ https://templatemo.com/tm-516-known
      <script src="/plantilla/js/owl.carousel.min.js"></script>
      <script src="/plantilla/js/smoothscroll.js"></script>
      <script src="/plantilla/js/custom.js"></script>
+     <script src="/plantilla/js/select.js"></script>
 
 </body>
 </html>

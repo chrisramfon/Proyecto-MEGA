@@ -48,7 +48,11 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-       
+        @if ($cliente->estado == 'Inactivo')
+       <div style="background: #FF0000; margin: 0; width: auto; height: 40px;">
+       </div>
+       <div style="background: #FFFFFF; text-align: center;"><h1>Inactivo</h1></div>
+       @endif
                     <section id="team">
           <div class="container">
                <div class="row">
@@ -72,7 +76,10 @@ https://templatemo.com/tm-516-known
                                    <br>
                                    <li><h3>Nombre:  </h3>{{ $cliente->Nombrecli }} {{$cliente->Apellido1}} {{$cliente->Apellido2}}</li>
                                    <br>
-                                   <li><h3>Dirección:  <a href="https://maps.google.com/?q={{$cliente->Direccion}}" target="_blank"></h3>{{ $cliente->Direccion }}</a></li>
+                                   <li><h3>Dirección: </h3>
+                                    {{ $cliente->Direccion }}<br>
+                                    <a href="https://maps.google.com/?q={{$cliente->Direccion}}" target="_blank"><small>(Ver en Google Maps)</small></a>
+                                   </li>
                                    <br>
                                    <li><h3>Telefono: </h3>{{$cliente->Telefono}} </li>
                               </ul>
@@ -92,9 +99,6 @@ https://templatemo.com/tm-516-known
                                    <br>
                                    <li><h3>Número de citas:  </h3>{{ $num_citas }}</li>
                                    <br>
-                                   <li><h3>Dirección: </h3>{{$cliente->Direccion}} </li>
-                                   <br>
-                                   <li><h3>Telefono: </h3>{{$cliente->Telefono}} </li>
                               </ul>
                          </div>
 
@@ -111,15 +115,16 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-        <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
-            <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 50px;">
-                <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
+        <div id="tabla-principal" >
+            <div id="tabla-contenedor" >
+                <div id="tabla-tabla" >
+                  <div class="table-responsive">
                     <table class="table">
                         <thead>
                            <tr>
-                               <td>Matricula</td>
-                               <td>Marca</td>
-                               <td>Modelo</td>
+                               <td><h4>Matricula</h4></td>
+                               <td><h4>Marca</h4></td>
+                               <td><h4>Modelo</h4></td>
                                <td></td>
                            </tr> 
                         </thead>
@@ -130,18 +135,23 @@ https://templatemo.com/tm-516-known
                                 <td>{{$vh->marca}}</td>
                                 <td>{{$vh->modelo}}</td>
                                 <td>
-                                   <a href="{{route('vehiculos.show',$vh->matricula)}}">Ver</a>
+                                   <h5>
+                                     <a href="{{route('vehiculos.show',$vh->matricula)}}">(Ver)</a>
+                                   </h5>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
-                    <div style="float: right;">{{ $lista_vehiculos->links() }}</div>
-                </div>
+
+                  
+                 
             </div>
+  <div style="float: right;">{{ $lista_vehiculos->links() }}</div>
+                </div>
         </div>
 
-        <div id="footer">
+        <div id="footer" style=" margin-top: 30px;">
             @extends('piepagina')
         </div>
     </div>

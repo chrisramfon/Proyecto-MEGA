@@ -10,4 +10,8 @@ class controlpagina extends Controller
 $this->validate($request,['nombre' => 'required', 'correo' => 'required']);
 return $request->all();
     }
+
+    public function inicio(){
+    	return view('index');
+    }
 }

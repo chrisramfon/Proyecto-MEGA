@@ -67,17 +67,19 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-        <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
-            <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 100px;">
-                <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
+        <div id="tabla-principal">
+            <div id="tabla-contenedor" >
+                <div id="tabla-tabla" >
+                  <div class="table-responsive">
                     <table class="table">
                         <thead>
                            <tr>
-                                <td>Id</td>
-                                <td>Cliente</td>
-                               <td>Matricula</td>
-                               <td>Marca</td>
-                               <td>Modelo</td>
+                                <td><h4>Id</h4></td>
+                                <td><h4>Cliente</h4></td>
+                               <td><h4>Matricula</h4></td>
+                               <td><h4>Marca</h4></td>
+                               <td><h4>Modelo</h4></td>
+                               <td><h4>Estado</h4></td>
                                <td></td>
                            </tr> 
                         </thead>
@@ -89,13 +91,17 @@ https://templatemo.com/tm-516-known
                                 <td>{{$vh->matricula}}</td>
                                 <td>{{$vh->marca}}</td>
                                 <td>{{$vh->modelo}}</td>
+                                <td> {{$vh->estado}} </td>
                                 <td>
-                                   <a href="{{route('vehiculos.show',$vh->matricula)}}">Ver</a>
+                                   <h5>
+                                     <a href="{{route('vehiculos.show',$vh->matricula)}}">(Ver)</a>
+                                   </h5>
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    </div>
                     <div style="float: right;">{{ $lista_vehiculos->links() }}</div>
                     
                     <a href="<?php echo route('vehiculos.create'); ?>" class="btn btn-dark">Crear</a>

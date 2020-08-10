@@ -39,16 +39,16 @@ https://templatemo.com/tm-516-known
           </div>
      </section>
      <!-- Imagen -->
-<section id="home">
+     <section id="home">
           <div class="row">
 
                     <div class="owl-carousel owl-theme home-slider">
-                         <div class="item item-modificarempleado">
+                         <div class="item item-estadocitas">
                               <div class="caption">
                                    <div class="container">
                                         <div class="col-md-6 col-sm-12">
-                                            <h1>Modificación de empleado</h1>
-                                             <h3>Modifica solo la información que deseas cambiar</h3>
+                                            <h1>Modificación del estado de la cita</h1>
+                                             <h3>Utiliza la lista de opciones para cambiar el estado de la cita</h3>
                                         </div>
                                    </div>
                               </div>
@@ -72,19 +72,9 @@ https://templatemo.com/tm-516-known
             <div id="formu" align="center" style="margin-bottom: 70px">
                 <br>
                 <br>
-                <form id="registroEmpleado" class="entry-form" method="post" action="{{ route('empleados.update', $empleado_editar->IDem)}}">
+                <form id="registroCita" class="entry-form" method="post" action="{{ route('citas.update', $cita_editar->IDcita)}}">
                     {!!method_field('PUT')!!}
                     {!! csrf_field() !!}
-                    <input type="text" name="nombre" placeholder="NOMBRE" class="form-control" id="nombre" value=" {{$empleado_editar->Nombreem}} ">
-                    {!!$errors->first('nombre', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="apellido1" placeholder="PATERNO" class="form-control" id="apellido1" value=" {{$empleado_editar->Apellido1}} ">
-                    {!!$errors->first('apellido1', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="apellido2" placeholder="MATERNO" class="form-control" id="apellido2" value=" {{$empleado_editar->Apellido2}} ">
-                    {!!$errors->first('apellido2', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="direccion" placeholder="DIRECCIÓN" class="form-control" id="direccion" value=" {{$empleado_editar->Direccion}} ">
-                    {!!$errors->first('direccion', '<h3 class="alerta">:message</h3>')!!}
-                    <input type="text" name="telefono" placeholder="TELEFONO" class="form-control" id="telefono" value=" {{$empleado_editar->Telefono}} ">  
-                    {!!$errors->first('telefono', '<h3 class="alerta">:message</h3>')!!}
                     <div class="custom-select">
                     <select name="estado" id="estado">
                         <option value="Activo">Activo</option>
@@ -95,6 +85,8 @@ https://templatemo.com/tm-516-known
                 </form>
             </div>
         </div>
+
+
         <div id="footer">
             @extends('piepagina')
         </div>

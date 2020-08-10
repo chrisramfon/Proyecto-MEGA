@@ -48,7 +48,11 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-       
+       @if ($vehiculo->estado == 'Inactivo')
+       <div style="background: #FF0000; margin: 0; width: auto; height: 40px;">
+       </div>
+       <div style="background: #FFFFFF; text-align: center;"><h1>Inactivo</h1></div>
+       @endif
         <section id="team">
           <div class="container">
                <div class="row">
@@ -68,11 +72,11 @@ https://templatemo.com/tm-516-known
                                    <h2> Vehículo </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3>Matricula: {{ $vehiculo->matricula }}</h3></li>
+                                   <li><h3>Matricula: </h3>{{ $vehiculo->matricula }}</li>
                                    <br>
-                                   <li><h3>Marca: {{ $vehiculo->marca }} </h3></li>
+                                   <li><h3>Marca: </h3>{{ $vehiculo->marca }} </li>
                                    <li><br></li>
-                                   <li><h3>Modelo: {{ $vehiculo->modelo }} </h3></li>
+                                   <li><h3>Modelo: </h3>{{ $vehiculo->modelo }} </li>
                               </ul>
                          </div>
                     </div>
@@ -85,13 +89,12 @@ https://templatemo.com/tm-516-known
                                    <h2> Dueño </h2>
                               </div>
                               <ul class="social-icon">
-                                   <li><h3>Nombre: {{ $cliente->Nombrecli }}  {{ $cliente->Apellido1 }} </h3></li>
+                                   <li><h3>Nombre: </h3>{{ $cliente->Nombrecli }}  {{ $cliente->Apellido1 }} {{$cliente->Apellido2}} </li>
                                    <br>
-                                   <li><h3>Telefono: {{ $cliente->Telefono }} </h3></li>
+                                   <li><h3>Telefono: </h3>{{ $cliente->Telefono }} </li>
                               </ul>
                          </div>
                     </div>
-
                </div>
           </div>
      </section>

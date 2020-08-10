@@ -165,14 +165,18 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-offset-1 col-md-4 col-sm-12">
                          <div class="entry-form">
-                              <form action="#" method="post">
+                              <form action="{{ route('login') }}" method="post" >
+                                   @csrf
                                    <h2>Inicia sesión</h2>
 
-                                   <input type="email" name="email" class="form-control" placeholder="CORREO ELECTRÓNICO">
+                                   <input id="usuario" type="usuario" name="usuario" class="form-control" placeholder="USUARIO">
 
-                                   <input type="password" name="password" class="form-control" placeholder="CONTRASEÑA">
+                                   <input id="contrasenia" type="password" name="contrasenia" class="form-control" placeholder="CONTRASEÑA">
 
                                    <button class="submit-btn form-control" id="form-submit">Iniciar Sesión</button>
+                                   @if(Session::has('flash_message')) 
+    <div class="alert alert-danger"><span></span><em> {!! session('flash_message') !!}</em></div> 
+@endif
                               </form>
                          </div>
                     </div>
@@ -435,7 +439,7 @@ https://templatemo.com/tm-516-known
 
                     <div class="col-md-12 col-sm-12">
                          <div class="section-title">
-                              <h2>Student Reviews <small>from around the world</small></h2>
+                              <h2>Reviews <small>comenarios de nuestros clientes</small></h2>
                          </div>
 
                          <div class="owl-carousel owl-theme owl-client">
@@ -445,10 +449,10 @@ https://templatemo.com/tm-516-known
                                              <img src="images/tst-image1.jpg" class="img-responsive" alt="">
                                         </div>
                                         <div class="tst-author">
-                                             <h4>Jackson</h4>
-                                             <span>Shopify Developer</span>
+                                             <h4>Gerardo Frias</h4>
+                                             <span></span>
                                         </div>
-                                        <p>You really do help young creative minds to get quality education and professional job search assistance. I’d recommend it to everyone!</p>
+                                        <p>Exelente servicio, cumplió con todas mis expectativas, recomendado y el ingeniero muy amable.</p>
                                         <div class="tst-rating">
                                              <i class="fa fa-star"></i>
                                              <i class="fa fa-star"></i>
@@ -520,45 +524,6 @@ https://templatemo.com/tm-516-known
                </div>
           </div>
      </section> 
-
-
-     <!-- CONTACT -->
-     <section id="contact">
-          <div class="container">
-               <div class="row">
-
-                    <div class="col-md-6 col-sm-12">
-                         <form id="contact-form" role="form" action="" method="post">
-                              <div class="section-title">
-                                   <h2>Contact us <small>we love conversations. let us talk!</small></h2>
-                              </div>
-
-                              <div class="col-md-12 col-sm-12">
-                                   <input type="text" class="form-control" placeholder="Enter full name" name="name" required="">
-                    
-                                   <input type="email" class="form-control" placeholder="Enter email address" name="email" required="">
-
-                                   <textarea class="form-control" rows="6" placeholder="Tell us about your message" name="message" required=""></textarea>
-                              </div>
-
-                              <div class="col-md-4 col-sm-12">
-                                   <input type="submit" class="form-control" name="send message" value="Send Message">
-                              </div>
-
-                         </form>
-                    </div>
-
-                    <div class="col-md-6 col-sm-12">
-                         <div class="contact-image">
-                              <img src="images/contact-image.jpg" class="img-responsive" alt="Smiling Two Girls">
-                         </div>
-                    </div>
-
-               </div>
-          </div>
-     </section>       
-
-
      <!-- FOOTER -->
      
      @extends('piepagina')

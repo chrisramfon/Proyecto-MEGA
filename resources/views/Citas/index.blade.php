@@ -66,16 +66,18 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-        <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
-            <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 100px;">
-                <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
+        <div id="tabla-principal" >
+            <div id="tabla-contenedor" >
+                <div id="tabla-tabla" >
+                  <div class="table-responsive">
                     <table class="table">
-                        <thead>
+                        <thead class="thead-light">
                            <tr>
-                               <td>Id</td>
-                               <td>Hora</td>
-                               <td>Fecha</td>
-                               <td>Comenarios</td>
+                               <td><h4>Id</h4></td>
+                               <td><h4>Hora</h4></td>
+                               <td><h4>Fecha</h4></td>
+                               <td><h4>Comenarios</h4></td>
+                               <td><h4>Estado</h4></td>
                                <td></td>
                            </tr> 
                         </thead>
@@ -86,11 +88,19 @@ https://templatemo.com/tm-516-known
                                 <td>{{$ct->Hora}}</td>
                                 <td>{{$ct->Fecha}}</td>
                                 <td>{{$ct->Comentarios}}</td>
-                                <td><a href="{{route('citas.show',$ct->IDcita)}}" class="btn btn-dark">Ver</a></td>
+                                <td> {{$ct->estado}} </td>
+                                <td>
+                                  <h5>
+                                    <a href="{{route('citas.show',$ct->IDcita)}}">(Ver)</a><br>
+                                    <a href="{{route('citas.edit', $ct->IDcita)}}"> (Cambiar estado) </a> 
+                                  </h5>
+                                </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                  </div>
+                    <div style="float: right;">{{ $lista_citas->links() }}</div>
                     <a href="<?php echo route('Cita.create'); ?>" class="btn btn-dark">Crear</a>
                 </div>
             </div>

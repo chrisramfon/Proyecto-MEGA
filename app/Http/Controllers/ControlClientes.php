@@ -13,7 +13,8 @@ class ControlClientes extends Controller
      */
     public function index()
     {
-        $lista_clientes = DB::select('select * from cliente');
+       /* $lista_clientes = DB::select('select * from cliente');*/
+       $lista_clientes = DB::table('cliente')->paginate(10);
         return view('clientes.index', compact('lista_clientes'));
     }
 
@@ -38,7 +39,7 @@ class ControlClientes extends Controller
         
         $validatedData = $request->validate(['nombre'=>'required|max:100','apellido1'=>'required|max:100', 'apellido2'=>'max:100', 'direccion'=>'max:100', 'telefono'=>'required|max:30', 'usuario'=>'required|max:50', 'contrasenia'=>'required|max:20']);
 
-        DB::table('cliente')->insert(["Nombrecli"=>$request->input('nombre'), "Apellido1"=>$request->input('apellido1'), "Apellido2"=>$request->input('apellido2'), "Direccion"=>$request->input('direccion'), "Telefono"=>$request->input('telefono')]);
+        DB::table('cliente')->insert(["Nombrecli"=>$request->input('nombre'), "Apellido1"=>$request->input('apellido1'), "Apellido2"=>$request->input('apellido2'), "Direccion"=>$request->input('direccion'), "Telefono"=>$request->input('telefono'), "Estado"=>'Activo']);
       
         DB::table('usuario')->insert(["usuario"=>$request->input('usuario'), "contrasenia"=>$request->input('contrasenia'), "tipo"=>'C']);
 
@@ -97,6 +98,7 @@ class ControlClientes extends Controller
             "Apellido2" => $request->input('apellido2'),
             "Direccion" => $request->input('direccion'),
             "Telefono" => $request->input('telefono'),
+            "estado" => request('estado'),
         ]);
 
         return redirect()->route('clientes.index');

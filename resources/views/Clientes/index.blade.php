@@ -67,17 +67,19 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-        <div id="tabla-principal" style="background: white; width: auto; height: 1080; padding: 30px;">
-            <div id="tabla-contenedor" style="background: white; height: 900px; width: 1200px; margin-right: auto; margin-left: auto; margin-top: 100px;">
-                <div id="tabla-tabla" style="background: white; padding: 30px; margin-top: 100px; width: 88%; margin-left: auto; margin-right: auto; height: 67%; ">
+        <div id="tabla-principal" >
+            <div id="tabla-contenedor" >
+                <div id="tabla-tabla" >
+                    <div class="table-responsive">
                     <table class="table">
                         <thead>
                            <tr>
-                                <td>Id</td>
-                                <td>Nombre</td>
-                               <td>Apellido paterno</td>
-                               <td>Apellido materno</td>
-                               <td>Telefono</td>
+                                <td><h4>Id</h4></td>
+                                <td><h4>Nombre</h4></td>
+                               <td><h4>Apellido paterno</h4></td>
+                               <td><h4>Apellido materno</h4></td>
+                               <td><h4>Telefono</h4></td>
+                               <td><h4>Estado</h4></td>
                                <td></td>
                            </tr> 
                         </thead>
@@ -89,14 +91,19 @@ https://templatemo.com/tm-516-known
                                 <td> {{ $cl->Apellido1 }} </td>
                                 <td>{{ $cl->Apellido2 }}</td>
                                 <td>{{$cl->Telefono}}</td>
+                                <td> {{$cl->estado}} </td>
                                 <td>
-                                   <a href="{{route('clientes.edit',$cl->IDcli)}}" class="btn btn-dark">Modificar</a>
-                                    <a href="{{route('clientes.show',$cl->IDcli)}}">Ver</a>
+                                  <h5>
+                                      <a href="{{route('clientes.edit',$cl->IDcli)}}" >(Modificar)</a><br>
+                                      <a href="{{route('clientes.show',$cl->IDcli)}}">(Ver)</a>
+                                  </h5> 
                                 </td>
                             </tr>
                             @endforeach
                         </tbody>
                     </table>
+                    </div>
+                    <div style="float: right;">{{ $lista_clientes->links() }}</div>
                     <a href="<?php echo route('clientes.create'); ?>" class="btn btn-dark">Crear</a>
                 </div>
             </div>

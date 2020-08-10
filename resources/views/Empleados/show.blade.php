@@ -48,7 +48,11 @@ https://templatemo.com/tm-516-known
         <div id="header">
             @extends('menu2')
         </div>
-       
+       @if ($empleado->estado == 'Inactivo')
+       <div style="background: #FF0000; margin: 0; width: auto; height: 40px;">
+       </div>
+       <div style="background: #FFFFFF; text-align: center;"><h1>Inactivo</h1></div>
+       @endif
         <section id="team">
           <div class="container">
                <div class="row">
@@ -72,7 +76,9 @@ https://templatemo.com/tm-516-known
                                    <br>
                                    <li><h3>Nombre: </h3>{{ $empleado->Nombreem }} {{$empleado->Apellido1}} {{$empleado->Apellido2}} </li>
                                    <br>
-                                   <li><h3><a href="https://maps.google.com/?q={{$empleado->Direccion}}" target="_blank">Dirección:  </h3>{{ $empleado->Direccion }}</a></li>
+                                   <li><h3>Dirección:  </h3>{{ $empleado->Direccion }}<br>
+                                    <a href="https://maps.google.com/?q={{$empleado->Direccion}}" target="_blank"><small>(Ver en Google Maps)</small></a>
+                                   </li>
                                    <br>
                                    <li><h3>Teléfono:  </h3>{{ $empleado->Telefono }}</li>
                               </ul>
@@ -88,8 +94,6 @@ https://templatemo.com/tm-516-known
                               </div>
                               <ul class="social-icon">
                                    <li><h3>Citas atendidas:  </h3> {{$num_citas}} </li>
-                                   <br>
-                                   <li><h3>Telefono: </h3></li>
                               </ul>
                          </div>
                     </div>

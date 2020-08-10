@@ -14,7 +14,9 @@ class ControlCitas extends Controller
      */
     public function index()
     {
-        $lista_citas=DB::select('select * from cita');
+       /* $lista_citas=DB::select('select * from cita');*/
+
+       $lista_citas = DB::table('cita')->paginate(10);
         return view('Citas.index', compact('lista_citas'));
     }
 
@@ -59,24 +61,29 @@ class ControlCitas extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  int  $id
+     * @param  int  $IDcita
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit($IDcita)
     {
-        //
+        $cita_editar=DB::table('cita')->where('IDcita',$IDcita)->first();
+        return view('citas.edit', compact('cita_editar'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
+     * @param  int  $IDcita
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, $IDcita)
     {
-        //
+        DB::table('cita')->where('IDcita', $IDcita)->update([
+            "estado" => request('estado'),
+        ]);
+
+        return redirect()->route('Cita.index');
     }
 
     /**
